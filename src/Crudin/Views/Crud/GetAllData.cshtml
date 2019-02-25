@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "GetAllData";
+}
+<style>
+    #customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color:darkturquoise;
+            color: white;
+        }
+</style>
+<h2>Showing All Details</h2>
+
+        <table id="customers">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>Zipcode</th>
+            </tr>
+            
+            <tr>
+                
+                <td>
+                    @Model.FirstName
+
+                </td>
+            
+           
+                
+                <td>@Model.LastName</td>
+            
+            
+           
+                
+                <td>
+                    @Model.Age
+                </td>
+         
+           
+                <td>
+                    @Model.Contact
+                </td>
+          
+            
+                
+                <td>
+                    @Model.Address
+                </td>
+            
+           
+                
+                <td>
+                    @Model.Country
+                </td>
+            
+                
+                <td>
+                    @Model.State
+                </td>
+           
+                
+                <td>
+                    @Model.Zipcode
+                </td>
+            </tr>
+        </table>
+

@@ -1,0 +1,110 @@
+﻿        @using Crudin.Models;
+        @model List<UserModel>
+<style>
+    #customers {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: darkturquoise;
+            color: white;
+        }
+</style>
+        <table border="1" class="table" id="customers">
+            <thead>
+                <tr>
+                    <th>
+                       RecordNumber
+                    </th>
+                    <th>
+                        FirstName
+                    </th>
+                    <th>
+                        LastName
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Contact
+                    </th>
+                    <th>
+                        Address
+                    </th>
+                    <th>
+                        Country
+                    </th>
+                    <th>
+                        State
+                    </th>
+                    <th>
+                        Zipcode
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+
+            </thead>
+                @foreach (UserModel Item in Model)
+                {
+                    <tr>
+                        <td>@Item.id</td>
+                        <td>@Item.FirstName</td>
+                        <td>@Item.LastName</td>
+                        <td>@Item.Age</td>
+                        <td>@Item.Contact</td>
+                        <td>@Item.Address</td>
+                        <td>@Item.Country</td>
+                        <td>@Item.State</td>
+                        <td>@Item.Zipcode</td>
+                        <td><button onclick="window.location.href='/Crud/deleted?id=@Item.id'">Delete</button>
+                            <button onclick="window.location.href='/Crud/Update?id=@Item.id'">Edit</button>
+                            <button onclick="window.location.href='/Crud/GetAllData?id=@Item.id'">View</button>
+                        </td>
+
+                    </tr>
+                }
+            
+        </table>
+
+
+
+
+
+<script type="text/javascript" src="first.js">
+function myFunction() {
+  var txt;
+  if (confirm("Do You Want to Delete Record!")) {
+      txt = window.location.href = "/Crud/deleted";
+     
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  
+}
+
+</script>
+
+
+
+
+

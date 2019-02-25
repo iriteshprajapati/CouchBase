@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+}
+
+<style>
+    #top {
+        padding-bottom: 40px;
+        background-color: snow;
+    }
+
+    .button {
+        background-color: turquoise;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+
+
+
+    <form action="UpdateData">
+        <div id="top">
+            <h3>Provide details to Update here:</h3>
+            <table width="100">
+                <tr>
+                    <td colspan="2" class="cell">
+
+                        Id
+                        <input id="Text1" type="text" name="id" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+
+                        FirstName
+                        <input id="Text1" type="text" name="FirstName" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        LastName
+                        <input id="Text1" type="text" name="LastName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        Age
+                        <input id="Text1" type="text" name="Age" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        Password
+                        <input id="pwd" type="password" name="Password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        ConfirmPassword
+                        <input id="cpwd" type="password" name="Confirmpassword" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        Contact
+                        <input id="Text1" type="text" name="Contact" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        Address
+                        <textarea id="TextArea1" rows="2" cols="20" name="Address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        Country
+                        <input id="Text1" type="text" name="Country" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+
+                        State
+                        <input id="Text1" type="text" name="State" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        Zipcode
+                        <input id="Text1" type="text" name="Zipcode" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="cell">
+                        <input id="Submit1" type="submit" value="submit" class="button" onclick="mycheck();" />
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </form>
+
